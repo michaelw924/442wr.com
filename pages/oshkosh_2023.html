@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oshkosh 2023</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Reference navigation bar from nav.html-->
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <header>
+      <h1>Oshkosh 2023</h1>
+      <p>The premier aviation event of the year.</p>
+    </header>
+
+    <section>
+      <h2>Event Highlights</h2>
+      <p>Join us at Oshkosh 2023, where aviation enthusiasts from around the globe gather to celebrate the wonder of flight. Experience airshows, workshops, and a showcase of the latest innovations in aviation.</p>
+      <img src="assets/oshkosh.jpg" alt="Oshkosh Airshow" style="width:100%; border: 2px solid var(--dark-red); border-radius: 5px;">
+    </section>
+
+    <footer id="contact">
+      <p>Contact us at: <a href="mailto:info@aviationadventures.com">info@aviationadventures.com</a></p>
+    </footer>
+  </body>
+</html>
