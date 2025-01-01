@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Include header -->
+<div id="head-placeholder"></div>
+<script>
+    fetch('head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('head-placeholder').innerHTML = data;
+        });
+</script>
+
+<body>
+    <!-- Include navigation -->
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <header>
+        <h1>Airplane Specs</h1>
+        <p>We made several custom decisions when building this airplane. Please look through them below. If there is an area you are interested in that is not listed here, please reach out via the contact form.</p>
+    </header>
+
+    <div class="storefront-grid">
+        <!-- Example storefront items -->
+        <div class="store-item" onclick="openModal('engine')">
+            <img src="assets/mounted_engine_in_shop.jpeg" alt="Engine">
+            <h3>Engine</h3>
+        </div>
+        <div class="store-item" onclick="openModal('item2')">
+            <img src="item2.jpg" alt="Item 2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="store-item" onclick="openModal('item3')">
+            <img src="item3.jpg" alt="Item 3">
+            <h3>Item 3</h3>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+
+    <!-- Modal for item details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+    </div>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
